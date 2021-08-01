@@ -9,7 +9,7 @@ package org.serenityos.gml.plugin.core.editor
 import com.intellij.openapi.fileTypes.LanguageFileType
 import javax.swing.Icon
 
-class GMLFileType : LanguageFileType(GMLLanguage()) {
+class GMLFileType : LanguageFileType(GMLLanguage.INSTANCE) {
 
     companion object {
         @JvmStatic val INSTANCE = GMLFileType()
