@@ -1,7 +1,13 @@
+<!--
+        BSD 2-Clause License
+
+        Copyright (c) 2021, Tom Needham <06needhamt@gmail.com>
+        All rights reserved.
+-->
 <idea-plugin>
-    <id>org.example.clion-gml-plugin</id>
-    <name>Plugin display name here</name>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <id>org.serenityos.gml.plugin</id>
+    <name>Serenity OS GML :^)</name>
+    <vendor email="06needhamt@gmail.com" url="https://github.com/06needhamt/">Tom Needham</vendor>
 
     <description><![CDATA[
     Enter short description for your plugin here.<br>
@@ -13,10 +19,13 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
+        <fileType name="Serenity OS GML File" implementationClass="org.serenityos.gml.plugin.core.psi.GMLFileType"
+                  fieldName="INSTANCE" language="Serenity OS GML" extensions="gml"/>
     </extensions>
 
     <actions>
-        <!-- Add your actions here -->
+        <action class="org.serenityos.gml.plugin.actions.InitialisationAction" id="Init">
+            <add-to-group group-id="NewProjectOrModuleGroup" anchor="last"/>
+        </action>
     </actions>
 </idea-plugin>
