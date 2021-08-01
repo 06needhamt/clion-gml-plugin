@@ -9,8 +9,9 @@ package org.serenityos.gml.plugin.core.psi
 import com.intellij.lang.Language
 import com.intellij.psi.tree.IElementType
 import org.jetbrains.annotations.NonNls
+import org.serenityos.gml.plugin.core.editor.GMLLanguage
 
-class GMLTokenType(debugName: @NonNls String, language: Language?) : IElementType(debugName, language) {
+class GMLTokenType(debugName: @NonNls String) : IElementType(debugName, GMLLanguage.INSTANCE) {
     override fun toString(): String {
         return "GMLTokenType.${super.toString()}"
     }
