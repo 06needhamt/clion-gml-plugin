@@ -75,3 +75,6 @@ fabric.properties
 
 # Gradle
 .gradle/**
+
+# Build Directory
+build/**
