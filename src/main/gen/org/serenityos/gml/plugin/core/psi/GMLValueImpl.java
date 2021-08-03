@@ -28,6 +28,30 @@ public class GMLValueImpl extends ASTWrapperPsiElement implements GMLValue {
 
   @Override
   @Nullable
+  public GMLArray getArray() {
+    return findChildByClass(GMLArray.class);
+  }
+
+  @Override
+  @Nullable
+  public GMLBoolean getBoolean() {
+    return findChildByClass(GMLBoolean.class);
+  }
+
+  @Override
+  @Nullable
+  public GMLProp getProp() {
+    return findChildByClass(GMLProp.class);
+  }
+
+  @Override
+  @Nullable
+  public GMLPropdef getPropdef() {
+    return findChildByClass(GMLPropdef.class);
+  }
+
+  @Override
+  @Nullable
   public PsiElement getNumber() {
     return findChildByType(NUMBER);
   }

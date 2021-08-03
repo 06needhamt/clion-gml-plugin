@@ -10,14 +10,14 @@ import com.intellij.psi.util.PsiTreeUtil;
 import static org.serenityos.gml.plugin.core.psi.GMLTypes.*;
 import com.intellij.extapi.psi.ASTWrapperPsiElement;
 
-public class GMLPropImpl extends ASTWrapperPsiElement implements GMLProp {
+public class GMLPropdefImpl extends ASTWrapperPsiElement implements GMLPropdef {
 
-  public GMLPropImpl(@NotNull ASTNode node) {
+  public GMLPropdefImpl(@NotNull ASTNode node) {
     super(node);
   }
 
   public void accept(@NotNull GMLVisitor visitor) {
-    visitor.visitProp(this);
+    visitor.visitPropdef(this);
   }
 
   @Override
@@ -30,24 +30,6 @@ public class GMLPropImpl extends ASTWrapperPsiElement implements GMLProp {
   @NotNull
   public List<GMLName> getNameList() {
     return PsiTreeUtil.getChildrenOfTypeAsList(this, GMLName.class);
-  }
-
-  @Override
-  @NotNull
-  public List<GMLProp> getPropList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, GMLProp.class);
-  }
-
-  @Override
-  @NotNull
-  public List<GMLPropdef> getPropdefList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, GMLPropdef.class);
-  }
-
-  @Override
-  @NotNull
-  public List<GMLValue> getValueList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, GMLValue.class);
   }
 
 }

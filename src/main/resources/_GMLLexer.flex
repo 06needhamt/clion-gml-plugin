@@ -27,7 +27,7 @@ WHITE_SPACE=\s+
 
 SPACE=[ \t\n\x0B\f\r]+
 STRING=\"[^\"]*\"|'[^']*'
-NUMBER=(\+|\-)?[:digit:]*
+NUMBER=(-)?[:digit:]+(.[:digit:])*
 ID=[:letter:][a-zA-Z_0-9]*
 
 %%
@@ -37,12 +37,16 @@ ID=[:letter:][a-zA-Z_0-9]*
   "@"                { return CLASSPREFIX; }
   ","                { return COMMA; }
   ":"                { return COLON; }
+  "."                { return DOT; }
   "{"                { return BRACE1; }
   "}"                { return BRACE2; }
   "["                { return BRACK1; }
   "]"                { return BRACK2; }
+  "("                { return PAREN1; }
+  ")"                { return PAREN2; }
   "\\n"              { return NEWLINE; }
-  "comment"          { return COMMENT; }
+  "true"             { return TRUE; }
+  "false"            { return FALSE; }
 
   {SPACE}            { return SPACE; }
   {STRING}           { return STRING; }

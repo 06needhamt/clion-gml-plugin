@@ -7,6 +7,14 @@ import com.intellij.psi.PsiElement;
 
 public class GMLVisitor extends PsiElementVisitor {
 
+  public void visitArray(@NotNull GMLArray o) {
+    visitPsiElement(o);
+  }
+
+  public void visitBoolean(@NotNull GMLBoolean o) {
+    visitPsiElement(o);
+  }
+
   public void visitGml(@NotNull GMLGml o) {
     visitValue(o);
   }
@@ -23,11 +31,11 @@ public class GMLVisitor extends PsiElementVisitor {
     visitPsiElement(o);
   }
 
-  public void visitValue(@NotNull GMLValue o) {
+  public void visitPropdef(@NotNull GMLPropdef o) {
     visitPsiElement(o);
   }
 
-  public void visitWhitespace(@NotNull GMLWhitespace o) {
+  public void visitValue(@NotNull GMLValue o) {
     visitPsiElement(o);
   }
 

@@ -8,6 +8,18 @@ import com.intellij.psi.PsiElement;
 public interface GMLValue extends PsiElement {
 
   @Nullable
+  GMLArray getArray();
+
+  @Nullable
+  GMLBoolean getBoolean();
+
+  @Nullable
+  GMLProp getProp();
+
+  @Nullable
+  GMLPropdef getPropdef();
+
+  @Nullable
   PsiElement getNumber();
 
   @Nullable

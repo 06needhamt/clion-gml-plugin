@@ -32,10 +32,4 @@ public class GMLObjectImpl extends GMLGmlImpl implements GMLObject {
     return PsiTreeUtil.getChildrenOfTypeAsList(this, GMLProp.class);
   }
 
-  @Override
-  @NotNull
-  public List<GMLWhitespace> getWhitespaceList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, GMLWhitespace.class);
-  }
-
 }

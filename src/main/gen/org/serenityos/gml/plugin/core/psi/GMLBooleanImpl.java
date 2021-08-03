@@ -10,14 +10,14 @@ import com.intellij.psi.util.PsiTreeUtil;
 import static org.serenityos.gml.plugin.core.psi.GMLTypes.*;
 import com.intellij.extapi.psi.ASTWrapperPsiElement;
 
-public class GMLWhitespaceImpl extends ASTWrapperPsiElement implements GMLWhitespace {
+public class GMLBooleanImpl extends ASTWrapperPsiElement implements GMLBoolean {
 
-  public GMLWhitespaceImpl(@NotNull ASTNode node) {
+  public GMLBooleanImpl(@NotNull ASTNode node) {
     super(node);
   }
 
   public void accept(@NotNull GMLVisitor visitor) {
-    visitor.visitWhitespace(this);
+    visitor.visitBoolean(this);
   }
 
   @Override

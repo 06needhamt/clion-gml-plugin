@@ -5,18 +5,9 @@ import java.util.List;
 import org.jetbrains.annotations.*;
 import com.intellij.psi.PsiElement;
 
-public interface GMLProp extends PsiElement {
+public interface GMLPropdef extends PsiElement {
 
   @NotNull
   List<GMLName> getNameList();
-
-  @NotNull
-  List<GMLProp> getPropList();
-
-  @NotNull
-  List<GMLPropdef> getPropdefList();
-
-  @NotNull
-  List<GMLValue> getValueList();
 
 }

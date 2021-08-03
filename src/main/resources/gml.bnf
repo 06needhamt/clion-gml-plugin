@@ -2,23 +2,25 @@
   tokens = [
     space='regexp:\s+'
     string = "regexp:\"[^\"]*\"|'[^']*'"
-    number = "regexp:(\+|\-)?\p{Digit}*"
+    number = "regexp:(-)?\p{Digit}+(.\p{Digit})*"
     id = "regexp:\p{Alpha}\w*"
     classprefix = "@"
     comma = ","
     colon = ":"
+    dot = "."
     brace1 = "{"
     brace2 = "}"
     brack1 = "["
     brack2 = "]"
+    paren1 = "("
+    paren2 = ")"
     newline = "\n"
   ]
   extends("object|gml")=value
 
   parserClass="org.serenityos.gml.plugin.parser.GMLParser"
   parserUtilClass="org.intellij.grammar.parser.GeneratedParserUtilBase"
-  // parserUtilClass="org.serenityos.gml.plugin.parser.GMLParserUtil"
-   parserImports=[ "static com.intellij.lang.WhitespacesBinders.*" ]
+  parserImports=[ "static com.intellij.lang.WhitespacesBinders.*" ]
 
   extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
 
@@ -33,14 +35,12 @@
 }
 
 root ::= gml
-gml ::= object   { hooks=[wsBinders="null, null"] }
-value ::= string | number {hooks=[leftBinder="GREEDY_LEFT_BINDER"]}
-
-whitespace ::= " " | "\t" | "\n" | comment;
-
-
-private item ::= gml {recoverWhile=recover}
-object ::= (prop | whitespace)* {pin(".*")=1 extends=gml}
-prop ::= classprefix name '::' name '{' [!'}' (prop | name ':' value) *] '}' {pin=1 recoverWhile=recover}
-name ::= id | string {name="name" hooks=[rightBinder="GREEDY_RIGHT_BINDER"]}
-private recover ::= !(',' | ']' | '}' | '[' | '{' |)
+gml ::= object { hooks=[wsBinders="null, null"] }
+boolean ::= true | false
+value ::= string | number | boolean | array | prop | propdef {hooks=[leftBinder="GREEDY_LEFT_BINDER"]}
+object ::= (prop)* {extends=gml}
+array ::= brack1 [!brack2 (string comma? | number comma? | boolean comma?) *] brack2
+propdef ::= classprefix name colon colon name
+prop ::= propdef brace1 [!brace2 ((prop | propdef) | (name colon value)) *] brace2
+name ::= id | string | {hooks=[rightBinder="GREEDY_RIGHT_BINDER"]}
+private recover ::= !(comma | brack2 | brace2 | brack1 | brace1 | dot)
