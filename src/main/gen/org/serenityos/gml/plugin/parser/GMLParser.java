@@ -185,12 +185,12 @@ public class GMLParser implements PsiParser, LightPsiParser {
   }
 
   /* ********************************************************** */
-  // id | string | 
+  // key | string | 
   public static boolean name(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "name")) return false;
     boolean r;
     Marker m = enter_section_(b, l, _NONE_, NAME, "<name>");
-    r = consumeToken(b, ID);
+    r = consumeToken(b, KEY);
     if (!r) r = consumeToken(b, STRING);
     if (!r) r = consumeToken(b, NAME_2_0);
     register_hook_(b, RIGHT_BINDER, GREEDY_RIGHT_BINDER);
@@ -309,16 +309,13 @@ public class GMLParser implements PsiParser, LightPsiParser {
   }
 
   /* ********************************************************** */
-  // classprefix name colon colon name
+  // classprefix classname
   public static boolean propdef(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "propdef")) return false;
     if (!nextTokenIs(b, CLASSPREFIX)) return false;
     boolean r;
     Marker m = enter_section_(b);
-    r = consumeToken(b, CLASSPREFIX);
-    r = r && name(b, l + 1);
-    r = r && consumeTokens(b, 0, COLON, COLON);
-    r = r && name(b, l + 1);
+    r = consumeTokens(b, 0, CLASSPREFIX, CLASSNAME);
     exit_section_(b, m, PROPDEF, r);
     return r;
   }

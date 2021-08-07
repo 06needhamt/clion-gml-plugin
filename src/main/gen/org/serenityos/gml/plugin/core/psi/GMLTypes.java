@@ -20,12 +20,13 @@ public interface GMLTypes {
   IElementType BRACE2 = new GMLTokenType("}");
   IElementType BRACK1 = new GMLTokenType("[");
   IElementType BRACK2 = new GMLTokenType("]");
+  IElementType CLASSNAME = new GMLTokenType("classname");
   IElementType CLASSPREFIX = new GMLTokenType("@");
   IElementType COLON = new GMLTokenType(":");
   IElementType COMMA = new GMLTokenType(",");
   IElementType DOT = new GMLTokenType(".");
   IElementType FALSE = new GMLTokenType("false");
-  IElementType ID = new GMLTokenType("id");
+  IElementType KEY = new GMLTokenType("key");
   IElementType NAME_2_0 = new GMLTokenType("name_2_0");
   IElementType NEWLINE = new GMLTokenType("\\n");
   IElementType NUMBER = new GMLTokenType("number");

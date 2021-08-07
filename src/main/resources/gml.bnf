@@ -3,8 +3,9 @@
     space='regexp:\s+'
     string = "regexp:\"[^\"]*\"|'[^']*'"
     number = "regexp:(-)?\p{Digit}+(.\p{Digit})*"
-    id = "regexp:\p{Alpha}\w*"
+    key = "regexp:\p{Alpha}\w*"
     classprefix = "@"
+    classname = "regexp:(\p{Alpha}\w*)::(\p{Alpha}\w*)"
     comma = ","
     colon = ":"
     dot = "."
@@ -40,7 +41,7 @@ boolean ::= true | false
 value ::= string | number | boolean | array | prop | propdef {hooks=[leftBinder="GREEDY_LEFT_BINDER"]}
 object ::= (prop)* {extends=gml}
 array ::= brack1 [!brack2 (string comma? | number comma? | boolean comma?) *] brack2
-propdef ::= classprefix name colon colon name
+propdef ::= classprefix classname
 prop ::= propdef brace1 [!brace2 ((prop | propdef) | (name colon value)) *] brace2
-name ::= id | string | {hooks=[rightBinder="GREEDY_RIGHT_BINDER"]}
+name ::= key | string | {hooks=[rightBinder="GREEDY_RIGHT_BINDER"]}
 private recover ::= !(comma | brack2 | brace2 | brack1 | brace1 | dot)

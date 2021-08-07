@@ -28,7 +28,8 @@ WHITE_SPACE=\s+
 SPACE=[ \t\n\x0B\f\r]+
 STRING=\"[^\"]*\"|'[^']*'
 NUMBER=(-)?[:digit:]+(.[:digit:])*
-ID=[:letter:][a-zA-Z_0-9]*
+KEY=[:letter:][a-zA-Z_0-9]*
+CLASSNAME=([:letter:][a-zA-Z_0-9]*)::([:letter:][a-zA-Z_0-9]*)
 
 %%
 <YYINITIAL> {
@@ -51,7 +52,8 @@ ID=[:letter:][a-zA-Z_0-9]*
   {SPACE}            { return SPACE; }
   {STRING}           { return STRING; }
   {NUMBER}           { return NUMBER; }
-  {ID}               { return ID; }
+  {KEY}              { return KEY; }
+  {CLASSNAME}        { return CLASSNAME; }
 
 }
 

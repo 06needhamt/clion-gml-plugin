@@ -8,6 +8,6 @@ import com.intellij.psi.PsiElement;
 public interface GMLPropdef extends PsiElement {
 
   @NotNull
-  List<GMLName> getNameList();
+  PsiElement getClassname();
 
 }

@@ -8,7 +8,7 @@ import com.intellij.psi.PsiElement;
 public interface GMLName extends PsiElement {
 
   @Nullable
-  PsiElement getId();
+  PsiElement getKey();
 
   @Nullable
   PsiElement getString();

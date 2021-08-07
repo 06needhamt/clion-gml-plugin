@@ -19,7 +19,7 @@ class GMLSyntaxHighlighter : SyntaxHighlighterBase() {
         @JvmStatic val TRUE = createTextAttributesKey("GML_TRUE", DefaultLanguageHighlighterColors.KEYWORD)
         @JvmStatic val FALSE = createTextAttributesKey("GML_FALSE", DefaultLanguageHighlighterColors.KEYWORD)
         @JvmStatic val CLASS_PREFIX = createTextAttributesKey("GML_CLASS_PREFIX", DefaultLanguageHighlighterColors.KEYWORD)
-        @JvmStatic val ID = createTextAttributesKey("GML_ID", DefaultLanguageHighlighterColors.KEYWORD)
+        @JvmStatic val CLASS_NAME = createTextAttributesKey("GML_CLASS_NAME", DefaultLanguageHighlighterColors.KEYWORD)
         @JvmStatic val COLON = createTextAttributesKey("GML_COLON", DefaultLanguageHighlighterColors.KEYWORD)
 
 
@@ -31,7 +31,7 @@ class GMLSyntaxHighlighter : SyntaxHighlighterBase() {
         @JvmStatic val TRUE_KEYS = arrayOf(TRUE)
         @JvmStatic val FALSE_KEYS = arrayOf(FALSE)
         @JvmStatic val CLASS_PREFIX_KEYS = arrayOf(CLASS_PREFIX)
-        @JvmStatic val ID_KEYS = arrayOf(ID)
+        @JvmStatic val CLASS_NAME_KEYS = arrayOf(CLASS_NAME)
         @JvmStatic val COLON_KEYS = arrayOf(COLON)
         @JvmStatic val EMPTY_KEYS = arrayOf<TextAttributesKey>()
     }
@@ -61,7 +61,7 @@ class GMLSyntaxHighlighter : SyntaxHighlighterBase() {
             GMLTypes.TRUE -> return TRUE_KEYS
             GMLTypes.FALSE -> return FALSE_KEYS
             GMLTypes.CLASSPREFIX -> return CLASS_PREFIX_KEYS
-            GMLTypes.ID -> return ID_KEYS
+            GMLTypes.CLASSNAME -> return CLASS_NAME_KEYS
             GMLTypes.COLON -> return COLON_KEYS
             else -> return EMPTY_KEYS
         }

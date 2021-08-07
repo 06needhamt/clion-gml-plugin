@@ -114,8 +114,8 @@ public class _GMLLexer implements FlexLexer {
 
   /* The ZZ_CMAP_A table has 3184 entries */
   static final char ZZ_CMAP_A[] = zzUnpackCMap(
-    "\11\0\1\2\4\1\22\0\1\2\1\0\1\3\4\0\1\4\1\23\1\24\2\0\1\14\1\5\1\16\1\0\12"+
-    "\11\1\15\5\0\1\13\32\12\1\21\1\25\1\22\1\0\1\10\1\0\1\34\3\12\1\32\1\33\5"+
+    "\11\0\1\2\4\1\22\0\1\2\1\0\1\3\4\0\1\4\1\23\1\24\2\0\1\15\1\5\1\16\1\0\12"+
+    "\11\1\13\5\0\1\14\32\12\1\21\1\25\1\22\1\0\1\10\1\0\1\34\3\12\1\32\1\33\5"+
     "\12\1\35\1\12\1\26\3\12\1\30\1\36\1\27\1\31\5\12\1\17\1\0\1\20\7\0\1\1\12"+
     "\0\1\2\11\0\1\7\12\0\1\7\4\0\1\7\5\0\27\7\1\0\12\7\4\0\14\7\16\0\5\7\7\0\1"+
     "\7\1\0\1\7\1\0\5\7\1\0\2\7\2\0\4\7\1\0\1\7\6\0\1\7\1\0\3\7\1\0\1\7\1\0\4\7"+
@@ -166,11 +166,11 @@ public class _GMLLexer implements FlexLexer {
   private static final String ZZ_ACTION_PACKED_0 =
     "\1\0\1\1\1\2\3\1\1\3\1\4\1\5\1\6"+
     "\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16"+
-    "\1\1\2\4\1\0\1\17\2\0\1\20\2\4\1\3"+
-    "\2\4\1\21\1\4\1\22";
+    "\1\1\2\4\1\0\1\17\3\0\1\20\2\4\1\3"+
+    "\1\0\2\4\1\21\1\22\1\4\1\23";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[34];
+    int [] result = new int[37];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -198,11 +198,11 @@ public class _GMLLexer implements FlexLexer {
     "\0\0\0\37\0\76\0\135\0\174\0\233\0\272\0\331"+
     "\0\37\0\37\0\37\0\37\0\37\0\37\0\37\0\37"+
     "\0\37\0\37\0\370\0\u0117\0\u0136\0\135\0\37\0\174"+
-    "\0\u0155\0\37\0\u0174\0\u0193\0\u01b2\0\u01d1\0\u01f0\0\331"+
-    "\0\u020f\0\331";
+    "\0\u0155\0\u0174\0\37\0\u0193\0\u01b2\0\u01d1\0\u01f0\0\u020f"+
+    "\0\u022e\0\u024d\0\331\0\u026c\0\331";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[34];
+    int [] result = new int[37];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -231,16 +231,19 @@ public class _GMLLexer implements FlexLexer {
     "\1\25\3\10\40\0\2\3\34\0\3\26\1\27\33\26"+
     "\4\30\1\27\32\30\6\0\1\7\2\0\1\7\25\0"+
     "\1\31\1\0\4\31\1\7\2\31\1\7\25\31\10\0"+
-    "\3\10\13\0\11\10\26\0\1\32\20\0\3\10\13\0"+
-    "\2\10\1\33\6\10\10\0\3\10\13\0\6\10\1\34"+
-    "\2\10\6\0\1\35\2\0\1\35\35\0\3\10\13\0"+
-    "\3\10\1\36\5\10\10\0\3\10\13\0\7\10\1\37"+
-    "\1\10\1\31\1\0\35\31\10\0\3\10\13\0\4\10"+
-    "\1\40\4\10\10\0\3\10\13\0\10\10\1\41\10\0"+
-    "\3\10\13\0\4\10\1\42\4\10";
+    "\3\10\1\32\12\0\11\10\26\0\1\33\20\0\3\10"+
+    "\1\32\12\0\2\10\1\34\6\10\10\0\3\10\1\32"+
+    "\12\0\6\10\1\35\2\10\6\0\1\36\2\0\1\36"+
+    "\40\0\1\37\33\0\3\10\1\32\12\0\3\10\1\40"+
+    "\5\10\10\0\3\10\1\32\12\0\7\10\1\41\1\10"+
+    "\1\31\1\0\35\31\7\0\1\42\2\0\1\42\13\0"+
+    "\11\42\10\0\3\10\1\32\12\0\4\10\1\43\4\10"+
+    "\10\0\3\10\1\32\12\0\10\10\1\44\10\0\3\42"+
+    "\13\0\11\42\10\0\3\10\1\32\12\0\4\10\1\45"+
+    "\4\10";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[558];
+    int [] result = new int[651];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -278,11 +281,11 @@ public class _GMLLexer implements FlexLexer {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\1\11\6\1\12\11\3\1\1\0\1\11\2\0"+
-    "\1\11\10\1";
+    "\1\0\1\11\6\1\12\11\3\1\1\0\1\11\3\0"+
+    "\1\11\3\1\1\0\6\1";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[34];
+    int [] result = new int[37];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -591,92 +594,97 @@ public class _GMLLexer implements FlexLexer {
             { return BAD_CHARACTER;
             } 
             // fall through
-          case 19: break;
+          case 20: break;
           case 2: 
             { return WHITE_SPACE;
             } 
             // fall through
-          case 20: break;
+          case 21: break;
           case 3: 
             { return NUMBER;
             } 
             // fall through
-          case 21: break;
-          case 4: 
-            { return ID;
-            } 
-            // fall through
           case 22: break;
-          case 5: 
-            { return CLASSPREFIX;
+          case 4: 
+            { return KEY;
             } 
             // fall through
           case 23: break;
-          case 6: 
-            { return COMMA;
-            } 
-            // fall through
-          case 24: break;
-          case 7: 
+          case 5: 
             { return COLON;
             } 
             // fall through
+          case 24: break;
+          case 6: 
+            { return CLASSPREFIX;
+            } 
+            // fall through
           case 25: break;
+          case 7: 
+            { return COMMA;
+            } 
+            // fall through
+          case 26: break;
           case 8: 
             { return DOT;
             } 
             // fall through
-          case 26: break;
+          case 27: break;
           case 9: 
             { return BRACE1;
             } 
             // fall through
-          case 27: break;
+          case 28: break;
           case 10: 
             { return BRACE2;
             } 
             // fall through
-          case 28: break;
+          case 29: break;
           case 11: 
             { return BRACK1;
             } 
             // fall through
-          case 29: break;
+          case 30: break;
           case 12: 
             { return BRACK2;
             } 
             // fall through
-          case 30: break;
+          case 31: break;
           case 13: 
             { return PAREN1;
             } 
             // fall through
-          case 31: break;
+          case 32: break;
           case 14: 
             { return PAREN2;
             } 
             // fall through
-          case 32: break;
+          case 33: break;
           case 15: 
             { return STRING;
             } 
             // fall through
-          case 33: break;
+          case 34: break;
           case 16: 
             { return NEWLINE;
             } 
             // fall through
-          case 34: break;
-          case 17: 
-            { return TRUE;
-            } 
-            // fall through
           case 35: break;
-          case 18: 
-            { return FALSE;
+          case 17: 
+            { return CLASSNAME;
             } 
             // fall through
           case 36: break;
+          case 18: 
+            { return TRUE;
+            } 
+            // fall through
+          case 37: break;
+          case 19: 
+            { return FALSE;
+            } 
+            // fall through
+          case 38: break;
           default:
             zzScanError(ZZ_NO_MATCH);
           }

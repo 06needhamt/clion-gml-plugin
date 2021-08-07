@@ -28,8 +28,8 @@ public class GMLNameImpl extends ASTWrapperPsiElement implements GMLName {
 
   @Override
   @Nullable
-  public PsiElement getId() {
-    return findChildByType(ID);
+  public PsiElement getKey() {
+    return findChildByType(KEY);
   }
 
   @Override

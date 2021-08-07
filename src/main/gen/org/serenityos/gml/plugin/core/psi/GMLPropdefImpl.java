@@ -28,8 +28,8 @@ public class GMLPropdefImpl extends ASTWrapperPsiElement implements GMLPropdef {
 
   @Override
   @NotNull
-  public List<GMLName> getNameList() {
-    return PsiTreeUtil.getChildrenOfTypeAsList(this, GMLName.class);
+  public PsiElement getClassname() {
+    return findNotNullChildByType(CLASSNAME);
   }
 
 }
