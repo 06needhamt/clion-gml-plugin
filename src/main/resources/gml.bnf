@@ -20,7 +20,7 @@
   extends("object|gml")=value
 
   parserClass="org.serenityos.gml.plugin.parser.GMLParser"
-  parserUtilClass="org.serenityos.gml.plugin.parser.GMLParserUtil"
+  parserUtilClass="org.intellij.grammar.parser.GeneratedParserUtilBase"
   parserImports=[ "static com.intellij.lang.WhitespacesBinders.*" ]
 
   extends="com.intellij.extapi.psi.ASTWrapperPsiElement"

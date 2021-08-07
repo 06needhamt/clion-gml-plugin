@@ -19,7 +19,7 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <fileType name="Serenity OS GML File" implementationClass="org.serenityos.gml.plugin.core.editor.GMLFileType"
+        <fileType name="Serenity OS GML" implementationClass="org.serenityos.gml.plugin.core.editor.GMLFileType"
                   fieldName="INSTANCE" language="Serenity OS GML" extensions="gml"/>
         <lang.parserDefinition language="Serenity OS GML" implementationClass="org.serenityos.gml.plugin.core.psi.GMLParserDefinition"/>
         <lang.syntaxHighlighterFactory language="Serenity OS GML" implementationClass="org.serenityos.gml.plugin.core.editor.syntax.GMLSyntaxHighlighterFactory"/>

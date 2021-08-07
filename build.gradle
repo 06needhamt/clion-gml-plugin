@@ -48,7 +48,7 @@ task generateGMLLexer(type: GenerateLexer) {
     source = "src/main/resources/_GMLLexer.flex"
 
     // target directory for lexer
-    targetDir = "src/main/gen/org/serenityos/gml/plugin/core/psi"
+    targetDir = "org/serenityos/gml/plugin/core/psi"
 
     // target classname, target file will be targetDir/targetClass.java
     targetClass = "_GMLLexer.java"

@@ -1,4 +1,4 @@
-package ;
+package org.serenityos.gml.plugin.lexer;
 
 import com.intellij.lexer.FlexLexer;
 import com.intellij.psi.tree.IElementType;
