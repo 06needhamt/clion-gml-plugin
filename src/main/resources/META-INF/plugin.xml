@@ -23,6 +23,7 @@
                   fieldName="INSTANCE" language="Serenity OS GML" extensions="gml"/>
         <lang.parserDefinition language="Serenity OS GML" implementationClass="org.serenityos.gml.plugin.core.psi.GMLParserDefinition"/>
         <lang.syntaxHighlighterFactory language="Serenity OS GML" implementationClass="org.serenityos.gml.plugin.core.editor.syntax.GMLSyntaxHighlighterFactory"/>
+        <colorSettingsPage implementation="org.serenityos.gml.plugin.core.editor.GMLColourSettingsPage" />
     </extensions>
 
     <actions>
