@@ -23,8 +23,10 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version = '2021.2'
+    version = '2021.1'
+    plugins = ['com.intellij.java']
 }
+
 patchPluginXml {
     changeNotes = """
       Add change notes here.<br>
@@ -48,7 +50,7 @@ task generateGMLLexer(type: GenerateLexer) {
     source = "src/main/resources/_GMLLexer.flex"
 
     // target directory for lexer
-    targetDir = "org/serenityos/gml/plugin/core/psi"
+    targetDir = "src/main/gen/org/serenityos/gml/plugin/core/lexer"
 
     // target classname, target file will be targetDir/targetClass.java
     targetClass = "_GMLLexer.java"
