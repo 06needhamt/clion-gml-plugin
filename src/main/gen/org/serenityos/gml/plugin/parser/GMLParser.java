@@ -4,7 +4,7 @@ package org.serenityos.gml.plugin.parser;
 import com.intellij.lang.PsiBuilder;
 import com.intellij.lang.PsiBuilder.Marker;
 import static org.serenityos.gml.plugin.core.psi.GMLTypes.*;
-import static org.intellij.grammar.parser.GeneratedParserUtilBase.*;
+import static org.serenityos.gml.plugin.parser.GMLParserUtil.*;
 import com.intellij.psi.tree.IElementType;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.tree.TokenSet;
