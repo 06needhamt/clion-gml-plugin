@@ -18,6 +18,7 @@
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <fileType name="Serenity OS GML" implementationClass="org.serenityos.gml.plugin.core.editor.GMLFileType"
